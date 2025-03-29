@@ -11,12 +11,16 @@ namespace ConsoleApp2
         // Шаблонный метод
         public void PrepareRecipe()
         {
-            BoilWater();
+            if (NeedBoiling())  //проверка, нужно ли кипячение 
+            { 
+                BoilWater(); 
+            }
             Brew();
             PourInCup();
             AddCondiments();
         }
 
+        protected virtual bool NeedBoiling() => true; //
         protected abstract void Brew();
 
         protected abstract void AddCondiments();
