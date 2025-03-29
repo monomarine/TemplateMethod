@@ -1,4 +1,6 @@
-﻿namespace ConsoleApp2
+﻿using System.Threading;
+
+namespace ConsoleApp2
 {
     class Program
     {
@@ -11,6 +13,11 @@
 
             Beverage coffee = new Coffee();
             coffee.PrepareRecipe();
+
+            Console.WriteLine();
+
+            Beverage coctail = new Coctail();
+            coctail.PrepareRecipe();
         }
     }
 }
